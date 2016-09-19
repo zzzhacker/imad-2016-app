@@ -21,6 +21,36 @@ var articleOne={
                 </p>`
 }
 
+var articleTwo={
+    title: 'Article-two:Zhacker',
+    heading: 'Article-two',
+    date: '19-09-2016',
+    content:`<p>
+                    this is my first article-two.this is my first article.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>
+                <p>
+                    this is my first article-two.this is my first article.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>
+                <p>
+                    this is my first article-two.this is my first article.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>`
+    
+}
+
+var articleThree={title: 'Article-two:Zhacker',
+    heading: 'Article-two',
+    date: '19-09-2016',
+    content:`<p>
+                    this is my first article-two.this is my first article.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>
+                <p>
+                    this is my first article-two.this is my first article.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>
+                <p>
+                    this is my first article-two.this is my first article.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>`
+    
+}
 
 function createTemplate(data){
     var title=data.title;
@@ -64,7 +94,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 app.get('/article-one',function(req,res){
@@ -72,11 +102,11 @@ app.get('/article-one',function(req,res){
 });
 
 app.get('/article-two',function(req,res){
-        res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+        res.send(createTemplate(articleTwo));
 });
 
 app.get('/article-three',function(req,res){
-        res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+        res.send(createTemplate(articleThree));
 });
 
 
