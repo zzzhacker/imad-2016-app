@@ -30,7 +30,7 @@ var articles={
             </p>`
     
 },
-   'article-three':{
+    'article-three':{
     title: 'Article-two:Zhacker',
     heading: 'Article-two',
     date: '19-09-2016',
@@ -90,7 +90,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 
-app.get('/:articles',function(req,res){
+app.get('/:articleName',function(req,res){
         var articleName=req.params.articleName;
         res.send(createTemplate(articles[articleName]));
 });
