@@ -31,11 +31,11 @@ var articles={
     
 },
     'article-three':{
-    title: 'Article-two:Zhacker',
-    heading: 'Article-two',
+    title: 'Article-three:Zhacker',
+    heading: 'Article-three',
     date: '19-09-2016',
     content:`<p>
-                    this is my first article-two.this is my first article.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                    this is my first article-three.
                </p>`
     
 },
