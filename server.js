@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var content={
+var articleOne={
     title: 'Article-one:Zhacker',
     heading: 'Article-one',
     date: '19-09-2016',
@@ -69,7 +69,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-    res.send(createTemplate(articalOne));
+    res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two',function(req,res){
