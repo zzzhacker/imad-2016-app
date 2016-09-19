@@ -5,6 +5,57 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var content={
+    title: 'Article-one:Zhacker',
+    heading: 'Article-one',
+    date: '19-09-2016',
+    content:`<p>
+                    this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>
+                <p>
+                    this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>
+                <p>
+                    this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.this is my first article-one.
+                </p>`
+}
+
+
+function createTemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=dat.content;
+    var htmlTemplate=`<html>
+        <head>
+            <title>
+                ${title}
+            </title>
+            <meta name="viewport" content="width-device-width,initial-scale-1"/>
+            <link href="/ui/style.css" rel="stylesheet"/>
+        </head>
+        <body>
+            <div class="container">
+                <div>
+                    <h3>
+                        ${heading}
+                    </h3>
+                </div>
+                <div>
+                    ${date}
+                </div>
+                <div>
+                    ${content}
+                </div>
+            </div>
+        </body>
+    </html>`
+;
+    return htmlTemplate;
+}
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
