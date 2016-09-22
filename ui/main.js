@@ -7,6 +7,6 @@ function moveRight(){
     marginleft=marginleft+1;
     log.style.marginleft=marginleft+"px";
 }
-log.onclick=fuction(){
+log.onclick=function(){
     var interval=setInterval(moveRight,50);
-}
+};
