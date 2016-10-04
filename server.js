@@ -102,7 +102,7 @@ var names=[];
 app.get('/submit-name',function(req,res){
     var name=req.query.name;
     names.push(name);
-    res.send(JSON.stringfy(names));
+    res.send(JSON.stringlfy(names));
 });
 
 app.get('/:articleName',function(req,res){
