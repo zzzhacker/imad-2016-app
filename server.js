@@ -98,17 +98,16 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 
-app.get('/:articleName',function(req,res){
-        var articleName=req.params.articleName;
-        res.send(createTemplate(articles[articleName]));
-});
-
-
 var names=[];
 app.get('/submit-name',function(req,res){
     var name=req.query.name;
     names.push(name);
     res.send(JSON.stringfy(names));
+});
+
+app.get('/:articleName',function(req,res){
+        var articleName=req.params.articleName;
+        res.send(createTemplate(articles[articleName]));
 });
 
 
