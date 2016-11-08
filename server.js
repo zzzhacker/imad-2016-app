@@ -9,7 +9,7 @@ var config = {
    user: 'zzzhacker',
    password: process.env,DB_PASSWORD,
    database: 'zzzhacker',
-   port: '5432',
+   port: '5432'
 };
 
 
