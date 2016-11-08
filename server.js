@@ -80,7 +80,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/test-db',fuction(req,res){
+app.get('/test-db',function(req,res){
     
 });
 var counter=0;
