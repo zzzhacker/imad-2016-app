@@ -110,7 +110,7 @@ app.post('/login',function(req,res){
                var dbString=result.rows[0].passowrd;
                var salt=dbString.split('$')[2];
                var hashedPassword=hash(passowrd,salt);
-               if(hashedPassword==dbString){
+               if(hashedPassword===dbString){
                    res.send("credentials are correct");
                }else{
                    res.send(403).send('usename/password is invailid');
