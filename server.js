@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
-var bodyParser=require('body-parser')
+var bodyParser=require('body-parser');
 
 var config = {
    host: 'db.imad.hasura-app.io',
@@ -88,7 +88,7 @@ app.post('/create-user',function(req,res){
            res.status(500).send(err.toString());
        } 
        else{
-           res.send('user sucessfully created : '+username)
+           res.send('user sucessfully created : '+username);
        }
     });
 });
@@ -152,7 +152,7 @@ app.get('/article/:articleName',function(req,res){
        }
             else{
                 if(result.rows.length===0){
-                    res.status(404).send('Article not found')
+                    res.status(404).send('Article not found');
                 }
                 else{
                     var articleData=result.rows[0];
