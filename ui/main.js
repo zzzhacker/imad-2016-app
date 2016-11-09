@@ -10,7 +10,7 @@ submit.onclick=function(){
         if(request.readystate ===XMLHttpRequest.Done){
             if(request.status===200){
                 console.log('login sucessful');
-                alert('you are logged in')
+                alert('you are logged in');
             }else if(request.status===403){
                 alert('username/passowrd incorrect');
             }else if(request.status===500){
