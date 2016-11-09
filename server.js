@@ -107,7 +107,7 @@ app.post('/login',function(req,res){
                res.send(403).send('usename/password is invailid');
            }
            else{
-               var dbString=result.rows[0].passowrd;
+               var dbString=result.rows[0].password;
                var salt=dbString.split('$')[2];
                var hashedPassword=hash(passowrd,salt);
                if(hashedPassword===dbString){
