@@ -113,7 +113,7 @@ app.post('/login',function(req,res){
                if(hashedPassword===dbString){
                    res.send("credentials are correct");
                }else{
-                   res.send(403).send('usename/password is invailid');
+                   res.send(403).send('username/password is invailid');
                }
            }
        }
