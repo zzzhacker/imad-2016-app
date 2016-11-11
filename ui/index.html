@@ -1,36 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="container">
-            <div id="madi" class="center">
-                <img src="https://www.anonymousglobal.org/images/cells/AnonymousAndorra.jpg" class="img-medium"/>
-            </div>
-            <hr/>
-            <br>
-            <h1>Personal</h1>
-            <div>
-                HI my name is Yogesh gurjar.
-            </div>
-            <hr/>
-            <h1>Professional</h1>
-            <div>
-                I am working on a web app.
-            </div>
-            <hr/>
-            <h3>login to unlock new feature</h3>
-            <div>
-                <input type='text' id='username' placeholder='username'/>
-                <input type='password' id='password'/>
-                <input type='submit' id='submit_btn'/>
-            </div>
-            <div class="footer">
-                
-            </div>
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="js/jquery.js"></script> 
+    <script src="js/bootstrap.js"></script>
+	<style>
+	    section{width: 100vw;
+                height: 100vh;
+				padding: 50px;
+		}
+		.cl_white {
+		    color: white;
+		}
+		img{
+		    width: 450px;
+			transition: opacity 1s ease-in-out;
+		}
+		img:hover{
+		    opacity: .5;
+		}
+		.col-text{
+		    -webkit-column-count: 3;
+		}
+	</style>
+  </head>
+    <body data-spy="scroll" data-target=".navbar">
+	    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+		    <ul class="nav navbar-nav">
+			    <li><a href="#home">Home</a></li>
+			    <li><a href="#work">What I Do</a></li>
+			    <li><a href="#about">what About Me</a></li>
+			    <li><a href="#contact">Contact Me</a></li>
+			</ul>
+		</nav>
+		
+		<section id="home" style="background: url(img/img1.jpg); background-size: 100% 100%;" class="cl_white text-center">
+		    <h1>My Portfolio</h1>
+			<p class="lead">Let just read about myself  and Contact Me</p>
+			<button class="btn btn-success"><a href="#contact">Contact Me!</a></button>
+		</section>
+		<section class="container-fluid"style="background: url(img/home.jpg); background-size: 100% 100%;" id="work">
+		    <div class="page-header">
+			    <h1 class=" cl_white text-center">MY WORK<h1>
+			</div>
+			<img src="img/img2.jpg" class="img-thumbnail">
+			<img src="img/img3.jpg" class="img-thumbnail">
+			<img src="img/img4.jpg" class="img-thumbnail">
+			<img src="img/img5.jpg" class="img-thumbnail">
+			<img src="img/img6.jpg" class="img-thumbnail">
+			<img src="img/pro.jpeg" class="img-thumbnail">
+		</section>
+		<section id="about" style="background: url(img/img4.jpg); background-size: 100% 100%;" class="container-fluid">
+		    <h2 class="text-center">About ME</h2>
+		    <div class="cl_white col-text">The Art of exploring various security breaches is termed as Hacking.
+            Computer Hackers have been around for so many years. Since the Internet became widely used in the World, We
+            have started to hear more and more about hacking. Only a few Hackers, such as Kevin Mitnick, are well known.
+            In a world of Black and White, it’s easy to describe the typical Hacker. A general outline of a typical Hacker is an
+            Antisocial, Pimple-faced Teenage boy. But the Digital world has many types of Hackers.
+            Hackers are human like the rest of us and are, therefore, unique individuals, so an exact profile is hard to outline.
+            The best broad description of Hackers is that all Hackers aren’t equal. Each Hacker has Motives, Methods and
+            Teenagers. Regardless, Hackers are curious about Knowing new things, Brave to take steps and they are
+            often very Sharp Minded.</div><br>
+			<div class="row">
+			    <div class="col-md-6">
+				    <div class="panel panel-primary"> 
+					    <div class="panel-heading">
+						    <h3>Ethical Hacking</h3>
+						</div>
+					    <div class="panel-body">
+						    <img src="img/images.jpeg" class="img-circle center-block">
+							<p class="lead">EC-COUNCIL certified ethical hacker</p>
+						</div>
+					    <div class="panel-footer">
+						    <p class="lead">SPECIALIZATION:Web Appliction Hacking</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+				    <div class="panel panel-success"> 
+					    <div class="panel-heading">
+						    <h3>Programmimg and Web Designing</h3>
+						</div>
+					    <div class="panel-body">
+						    <img src="img/img8.jpeg" class="img-circle center-block">
+							<p>
+							    <ul>
+								    <li><h4>PROGRAMMING:</h4><p>python,c</p></li>
+									<li><h4>WEB DESIGN:</h4><p>bootstarp,html5</p></li>
+								</ul>
+							</p>
+						</div>
+					    <div class="panel-footer">
+						    <p class="lead">SPECIALIZATION:Python Programmig</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact" style="background: silver;">
+		    <div class="page-header">
+			    <h2 class="text-center">Contact Me!</h2>
+			</div>
+			<form class="col-md-5 col-md-offset-4">
+			    <div class="form-group">
+				    <input type="text" placeholder="Type your name" class="form-control">
+				</div>
+				<div class="form-group">
+				    <input type="email" placeholder="Type your Email" class="form-control">
+				</div>
+				<div class="form-group">
+				    <input type="text" placeholder="Subject" class="form-control">
+				</div>
+				<div class="form-group">
+				    <textarea rows="10" class="form-control" placeholder="Comments"></textarea>
+				</div>
+				<div class="form-group">
+				    <input type="submit" class="btn btn-success btn-block">
+				</div>
+			</form>
+		     
+		</section>
+	    
     </body>
 </html>
