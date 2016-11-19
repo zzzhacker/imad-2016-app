@@ -1,3 +1,21 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @zzzhacker
+ Watch 7
+  Star 4
+  Fork 4,161 coco98/imad-2016-app
+forked from hasura-imad/imad-2016-app
+ Code  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathimad-2016-app/ui/main.js
+6c85b3c  16 days ago
+@coco98 coco98 [imad-console] Updates ui/main.js
+1 contributor
+RawBlameHistory     
+139 lines (122 sloc)  4.9 KB
 
 function loadLoginForm () {
     var loginHtml = `
@@ -5,7 +23,7 @@ function loadLoginForm () {
         <input type="text" id="username" placeholder="username" />
         <input type="password" id="password" />
         <br/><br/>
-        <input type="submit" id="login_btn" value="Login"/>
+        <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
         `;
     document.getElementById('login_area').innerHTML = loginHtml;
